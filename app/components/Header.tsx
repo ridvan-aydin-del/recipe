@@ -3,40 +3,28 @@ import Link from "next/link";
 export default function Header() {
   return (
     <header className="bg-white shadow-md">
-      <nav className="container mx-auto px-4 py-6">
-        <div className="flex items-center justify-between">
-          <Link href="/" className="text-2xl font-bold text-orange-600">
-            Lezzetli Tarifler
+      <div className="container mx-auto px-4">
+        <nav className="flex justify-between items-center h-16">
+          <Link href="/" className="text-orange-500 text-xl font-bold">
+            Delicious Recipes
           </Link>
 
-          <div className="hidden md:flex space-x-8">
-            <Link
-              href="/tarifler"
-              className="text-gray-800 font-medium hover:text-orange-600 transition-colors"
-            >
-              Tüm Tarifler
+          <div className="flex gap-6">
+            <Link href="/all-recipes" className="hover:text-orange-500">
+              All Recipes
             </Link>
-            <Link
-              href="/kategoriler"
-              className="text-gray-800 font-medium hover:text-orange-600 transition-colors"
-            >
-              Kategoriler
+            <Link href="/categories" className="hover:text-orange-500">
+              Categories
             </Link>
-            <Link
-              href="/populer"
-              className="text-gray-800 font-medium hover:text-orange-600 transition-colors"
-            >
-              Popüler Tarifler
+            <Link href="/popular-recipes" className="hover:text-orange-500">
+              Popular Recipes
             </Link>
-            <Link
-              href="/hakkimizda"
-              className="text-gray-800 font-medium hover:text-orange-600 transition-colors"
-            >
-              Hakkımızda
+            <Link href="/about" className="hover:text-orange-500">
+              About Us
             </Link>
           </div>
-        </div>
-      </nav>
+        </nav>
+      </div>
     </header>
   );
 }
